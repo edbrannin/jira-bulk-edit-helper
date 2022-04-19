@@ -43,7 +43,13 @@
 		<label>
 			Issue keys (one per line):
 			<br />
-			<textarea bind:value={keysInput} rows="10"></textarea>
+			<textarea
+				bind:value={keysInput}
+				rows={Math.max(
+					keysInput.split('\n').length + 3,
+					10
+				)}
+			></textarea>
 		</label>
 	</div>
 </main>
